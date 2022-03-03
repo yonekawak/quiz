@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Fruit;
 
 class QuizzesTableSeeder extends Seeder
 {
@@ -12,11 +13,95 @@ class QuizzesTableSeeder extends Seeder
     public function run()
     {
         DB::table('quizzes')->insert([
-            'question' => '問題文',
-            'choice1' => '選択肢１',
+            'question' => '問題文1',
+            'answer_number' => 1,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
         ]);
-        
+        DB::table('quizzes')->insert([
+            'question' => '問題文2',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文3',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文4',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文5',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文6',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文7',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文8',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文9',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
+        DB::table('quizzes')->insert([
+            'question' => '問題文10',
+            'answer_number' => 2,
+            'choice1' => '選択肢1',
+            'choice2' => '選択肢2',
+            'choice3' => '選択肢3',
+            'choice4' => '選択肢4',
+            'category_id' => 0,
+        ]);
     }
     
-    factory(App\Quiz::class, 3)->create();
 }

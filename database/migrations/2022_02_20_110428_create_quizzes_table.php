@@ -21,6 +21,8 @@ class CreateQuizzesTable extends Migration
             $table->string('choice2');
             $table->string('choice3');
             $table->string('choice4');
+            $table->integer('category_id')->unsigned()->nullable();
+            $table->timestamps();
         });
     }
 

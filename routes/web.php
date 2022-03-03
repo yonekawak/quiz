@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ategoryController;
+use App\Category;
+use App\Quiz;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,5 +14,25 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/quizzes', 'QuizController@top');
-Route::get('/quizzes/{show}', 'QuizController@show');
+Route::get('/categories', 'CategoryController@index');
+Route::get('/categories/quizzes', 'CategoryController@show');
+Route::post('/quizzes/answer', 'QuizController@show');
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+// 「最強」のユーザーしか使えない機能
+//Route::group(['middleware' => ['auth', 'can:saikyou_only']], function () {
+    //処理
+//});
+
+// 「最強」と「普通」のユーザーが使える機能
+//Route::group(['middleware' => ['auth', 'can:saikyou_and_futsuu']], function () {
+    //処理
+//});
+
+//全てのユーザーが使える機能
+//Route::group(['middleware' => ['auth', 'can:all']], function () {
+    //処理
+//});
+

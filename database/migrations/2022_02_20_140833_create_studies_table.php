@@ -15,10 +15,11 @@ class CreateStudiesTable extends Migration
     {
         Schema::create('studies', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('users_id')->unsigned();
-            $table->integer('quizzes_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('quiz_id')->unsigned();
             $table->integer('selected');
             $table->integer('count');
+            $table->timestamps();
         });
     }
 

@@ -16,11 +16,17 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('score');
-            $table->string('age');
-            $table->string('sex');
-            $table->string('image');
-            $table->string('admin');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+            $table->integer('score')->nullable()->change();
+            $table->integer('age')->nullable()->change();
+            $table->string('sex')->nullable()->change();
+            $table->string('image')->nullable()->change();
+            $table->string('admin')->nullable()->change();
+            $table->integer('permission_id')->unsigned()->comment('権限ID');
         });
     }
 
@@ -31,6 +37,8 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('users', function (Blueprint $table) {
+            $table->dropForeign('users_permission_id_foreign');
+        });
     }
 }

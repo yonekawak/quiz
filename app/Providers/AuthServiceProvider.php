@@ -25,6 +25,19 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        // 「最強」だけに適用
+        Gate::define('saikyou_only', function ($user) {
+            return ($user->permission_id == 1);
+        });
+
+        // 「最強」と「普通」に適用
+        Gate::define('saikyou_and_futsuu', function ($user) {
+            return ($user->permission_id <= 2);
+        });
+
+        // 「最強」と「普通」と「最弱」全てに適用
+        Gate::define('all', function ($user) {
+            return ($user->permission_id <= 3);
+        });
     }
 }

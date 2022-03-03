@@ -7,12 +7,9 @@ use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
-    public function top(Quiz $quiz)
+    public function show(Request $request, Quiz $quiz)
     {
-        return view('quizzes/top')->with(['quiz' => $quiz]);
-    }
-    public function show(Quiz $quiz)
-    {
-        return view('quizzes/show')->with(['quiz' => $quiz]);
+        $results = $request['results'];
+        return view('quizzes/show',)->with(['quizzes' => $quiz->get(),'results' => $results]);
     }
 }

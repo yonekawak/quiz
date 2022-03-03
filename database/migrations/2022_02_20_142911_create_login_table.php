@@ -20,6 +20,7 @@ class CreateLoginTable extends Migration
             $table->decimal('nmloginhost');
             $table->decimal('nmuseragent');
             $table->datetime('dtlogout');
+            $table->timestamps();
             
         });
     }

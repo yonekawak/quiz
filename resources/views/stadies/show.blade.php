@@ -12,18 +12,10 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1>回答画面</h1>
-        @foreach ($quizzes as $key => $quiz)
-            {{ $results[$key] }}
-            @if($results[$key] == $quiz->answer_number)
-                正解
-                @else
-                不正解
-            @endif
-            <h2 class='answer_number'>{{ $quiz->answer_number }}</h2>
-        @endforeach
-        <a href='/categories'>トップ画面に戻る</a>
-        <a href=''></a>
+        <h1>学習画面</h1>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
     </body>
 </html>
 @endsection
