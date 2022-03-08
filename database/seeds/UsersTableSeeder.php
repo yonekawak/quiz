@@ -12,18 +12,16 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            [
-                //略
-                'permission_id' => 1,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ],
-            [
-                //略
-                'permission_id' => 2,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ],
+            'name' => 'admin',
+            'email' => 'a@a',
+            'password' => \Hash::make('aaaaaaaa'),
+            'role' => 'admin',
+        ]);
+        DB::table('users')->insert([
+            'name' => 'user',
+            'email' => 'b@b',
+            'password' => \Hash::make('bbbbbbbb'),
+            'role' => 'user',
         ]);
     }
 }

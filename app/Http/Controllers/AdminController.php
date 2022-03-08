@@ -12,4 +12,15 @@ class AdminController extends Controller
     {
         return view('admins/index')->with(['quizzes' =>  $quiz->get()]);
     }
+    public function create()
+    {
+        return view('admins/create');
+    }
+    public function store(Request $request, Quiz $quiz)
+    {
+        
+        $input = $request['post'];
+        $quiz->fill($input)->save();
+        return redirect('/admins');
+    }
 }

@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->integer('age')->nullable()->change();
             $table->string('sex')->nullable()->change();
             $table->string('image')->nullable()->change();
+            $table->string('role')->nullable();
         });
     }
 

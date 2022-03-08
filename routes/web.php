@@ -15,11 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/categories', 'CategoryController@index');
-Route::get('/admins', 'AdminController@index');
 Route::get('/studies', 'StudyController@show');
 
 Route::get('/categories/quizzes', 'CategoryController@show');
 Route::post('/quizzes/answer', 'QuizController@show');
+
+Route::get('/admins', 'AdminController@index')->middleware('admin');
+Route::get('/admins/create', 'AdminController@create');
+Route::post('/admins', 'AdminController@store');
 
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
