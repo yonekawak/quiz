@@ -12,15 +12,16 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1>回答画面</h1>
         @foreach ($quizzes as $key => $quiz)
-            {{ $results[$key] }}
+            <h3>{{ $quiz->question }}</h3>
+            あなたの回答{{ $results[$key] }}
             @if($results[$key] == $quiz->answer_number)
-                正解
+                〇
                 @else
-                不正解
+                ✕
             @endif
             <h2 class='answer_number'>{{ $quiz->answer_number }}</h2>
+            <h5>回答解説</h5>
         @endforeach
         <a href='/categories'>トップ画面に戻る</a>
         <a href=''></a>

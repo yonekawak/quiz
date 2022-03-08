@@ -37,10 +37,10 @@
                             <a class="nav-link" href="/categories">レッスン（トップ画面）</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">マイページ（学習画面）</a>
+                            <a class="nav-link" href="/studies">マイページ（学習画面）</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">管理者ページ（管理画面）</a>
+                            <a class="nav-link" href="/admins">管理者ページ（管理画面）</a>
                         </li>
                     </ul>
 

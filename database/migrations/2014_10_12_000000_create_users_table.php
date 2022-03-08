@@ -25,8 +25,6 @@ class CreateUsersTable extends Migration
             $table->integer('age')->nullable()->change();
             $table->string('sex')->nullable()->change();
             $table->string('image')->nullable()->change();
-            $table->string('admin')->nullable()->change();
-            $table->integer('permission_id')->unsigned()->comment('権限ID');
         });
     }
 
@@ -38,7 +36,7 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users', function (Blueprint $table) {
-            $table->dropForeign('users_permission_id_foreign');
+            
         });
     }
 }

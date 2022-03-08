@@ -20,7 +20,7 @@
                 <div class='quizzes'>
                     <div class='quiz'>
                         <h2 class='question'>{{ $quiz->question }}</h2>
-                        <select　name="results[{{ $key }}]" size="4">
+                        <select name="results[{{ $key }}]">
                             <option value="1">{{ $quiz->choice1 }}</option>
                             <option value="2">{{ $quiz->choice2 }}</option>
                             <option value="3">{{ $quiz->choice3 }}</option>

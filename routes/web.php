@@ -15,24 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/categories', 'CategoryController@index');
+Route::get('/admins', 'AdminController@index');
+Route::get('/studies', 'StudyController@show');
+
 Route::get('/categories/quizzes', 'CategoryController@show');
 Route::post('/quizzes/answer', 'QuizController@show');
 
 Auth::routes();
-
 Route::get('/', 'HomeController@index')->name('home');
-// 「最強」のユーザーしか使えない機能
-//Route::group(['middleware' => ['auth', 'can:saikyou_only']], function () {
-    //処理
-//});
-
-// 「最強」と「普通」のユーザーが使える機能
-//Route::group(['middleware' => ['auth', 'can:saikyou_and_futsuu']], function () {
-    //処理
-//});
-
-//全てのユーザーが使える機能
-//Route::group(['middleware' => ['auth', 'can:all']], function () {
-    //処理
-//});
-

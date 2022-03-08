@@ -15,7 +15,7 @@
                     @endif
                     <div style="text-align:center;">
                         {{ Auth::user()->name }}さん<br>
-                        You are logged in!<br>
+                        ようこそ！<br>
                         <a href="/categories"><button type="button" class='btn btn-secondary'>トップに移動する</button></a>
                     </div>
                 </div>

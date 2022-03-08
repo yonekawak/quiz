@@ -14,18 +14,12 @@ class PermissionTableSeeder extends Seeder
         DB::table('permissions')->insert([
             [
                 // id = 1
-                'name' => '最弱',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-            ],
-            [
-                // id = 2
                 'name' => '普通',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                // id = 3
+                // id = 2
                 'name' => '最強',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
