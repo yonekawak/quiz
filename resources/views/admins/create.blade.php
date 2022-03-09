@@ -12,31 +12,34 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1>管理者画面</h1>
-        <h1>クイズ作成</h1>
+        <h1>作成画面</h1>
         <form action="/admins" method="POST">
             @csrf
             <div class="question">
-                <h2>問題文</h2>
+                <a>問題文</a>
                 <input type="text" name="post[question]" placeholder="問題文"/>
             </div>
             <div class="body">
-                <h2>選択肢１</h2>
+                <br>
+                <a>１</a>
                 <textarea name="post[choice1]" placeholder="選択肢１"></textarea>
-                <h2>選択肢２</h2>
+                <br>
+                <a>２</a>
                 <textarea name="post[choice2]" placeholder="選択肢２"></textarea>
-                <h2>選択肢３</h2>
+                <br>
+                <a>３</a>
                 <textarea name="post[choice3]" placeholder="選択肢３"></textarea>
-                <h2>選択肢４</h2>
+                <br>
+                <a>４</a>
                 <textarea name="post[choice4]" placeholder="選択肢４"></textarea>
             </div>
             <div>
-                <h2>答えの番号</h2>
+                <a>答えの番号</a>
                 <input type="number" name="post[answer_number]" placeholder="答えの番号"/>
             </div>
             <input type="submit" value="保存"/>
         </form>
-        <div class="back">[<a href="/">back</a>]</div>
+        <div class="back">[<a href="/admins">戻る</a>]</div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
     </body>

@@ -23,6 +23,9 @@ Route::post('/quizzes/answer', 'QuizController@show');
 Route::get('/admins', 'AdminController@index')->middleware('admin');
 Route::get('/admins/create', 'AdminController@create');
 Route::post('/admins', 'AdminController@store');
+Route::get('/admins/quizzes/{quiz}','AdminController@show');
+Route::get('/admins/quizzes/{quiz}/edit', 'AdminController@edit');
+Route::put('/admins/quizzes/{quiz}', 'AdminController@update');
 
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');

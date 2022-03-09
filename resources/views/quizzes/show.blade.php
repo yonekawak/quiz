@@ -13,15 +13,17 @@
     </head>
     <body>
         @foreach ($quizzes as $key => $quiz)
-            <h3>{{ $quiz->question }}</h3>
-            あなたの回答{{ $results[$key] }}
             @if($results[$key] == $quiz->answer_number)
                 〇
                 @else
                 ✕
             @endif
-            <h2 class='answer_number'>{{ $quiz->answer_number }}</h2>
-            <h5>回答解説</h5>
+            <br>
+            <a>問題文：{{ $quiz->question }}</a>
+            <br>
+            あなたの回答番号：{{ $results[$key] }}
+            <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
+            <br>
         @endforeach
         <a href='/categories'>トップ画面に戻る</a>
         <a href=''></a>

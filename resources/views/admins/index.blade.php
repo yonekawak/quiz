@@ -12,19 +12,29 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1>管理者画面</h1>
+        <h1>クイズ一覧画面</h1>
+        [<a href='/admins/create'>クイズを追加する</a>]
         @foreach ($quizzes as $key => $quiz)
             <div class='quizzes'>
-                <h3>{{ $quiz->question }}</h3>
-                <h3>{{ $quiz->answer_number }}</h3>
-                <h3>{{ $quiz->choice1 }}</h3>
-                <h3>{{ $quiz->choice2 }}</h3>
-                <h3>{{ $quiz->choice3 }}</h3>
-                <h3>{{ $quiz->choice4 }}</h3>
-                <h3>{{ $quiz->category_id }}</h3>
+                <a href="/admins/quizzes/{{ $quiz->id }}">問題文</a>:{{ $quiz->question }}
+                <br>
+                答えの番号:<a>{{ $quiz->answer_number }}</a>
+                <br>
+                １:<a>{{ $quiz->choice1 }}</a>
+                <br>
+                ２:<a>{{ $quiz->choice2 }}</a>
+                <br>
+                ３:<a>{{ $quiz->choice3 }}</a>
+                <br>
+                ４:<a>{{ $quiz->choice4 }}</a>
+                <br>
+                ステージ番号:<a>{{ $quiz->category_id }}</a>
+                <br>
             </div>
         @endforeach
-        [<a href='/admins/create'>create</a>]
+        <div class='paginate'>
+            {{ $quizzes->links() }}
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
     </body>
