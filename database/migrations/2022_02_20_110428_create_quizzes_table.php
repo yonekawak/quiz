@@ -23,6 +23,7 @@ class CreateQuizzesTable extends Migration
             $table->string('choice4');
             $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

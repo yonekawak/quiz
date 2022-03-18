@@ -28,10 +28,10 @@
                 <br>
                 ４:<a>{{ $quiz->choice4 }}</a>
                 <br>
-                ステージ番号:<a>{{ $quiz->category_id }}</a>
-                <br>
+                カテゴリー:<a>{{ $quiz->category->name }}</a>
             </div>
         @endforeach
+        
         <div class='paginate'>
             {{ $quizzes->links() }}
         </div>

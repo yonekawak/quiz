@@ -14,13 +14,13 @@
     </head>
     <body>
         <h1>クイズ画面</h1>
-        <form  action="/quizzes/answer" method="POST">
+        <form  action="/results" method="POST">
             @csrf
             @foreach ($quizzes as $key => $quiz)
                 <div class='quizzes'>
                     <div class='quiz'>
                         <h2 class='question'>{{ $quiz->question }}</h2>
-                        <select name="results[{{ $key }}]">
+                        <select name="results[{{ $key }}]" size="4">
                             <option value="1">{{ $quiz->choice1 }}</option>
                             <option value="2">{{ $quiz->choice2 }}</option>
                             <option value="3">{{ $quiz->choice3 }}</option>
@@ -28,6 +28,7 @@
                         </select>
                     </div>
                 </div>
+                <br>
             @endforeach
             <div>
                 <a href='/categories'>トップ画面に戻る</a>

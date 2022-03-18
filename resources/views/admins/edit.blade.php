@@ -19,7 +19,7 @@
             @method('PUT')
             <div class='content__question'>
                 <h2>問題文</h2>
-                <input type='text' name='post_a[question]' value="{{ $quiz->question }}">
+                <textarea id='question' name='post_a[question]' value="{{ $quiz->question }}"></textarea>
             </div>
             <div class='content__choice1'>
                 <h2>１</h2>
@@ -40,6 +40,14 @@
             <div>
                 <h2>答えの番号</h2>
                 <input type='number' name='post_a[answer_number]'  value="{{ $quiz->answer_number }}">
+            </div>
+            <div>
+                <h2>カテゴリー</h2>
+                <select name="post[category_id]">
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
             </div>
             <input type="submit" value="保存">
         </form>

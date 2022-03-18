@@ -16,7 +16,7 @@
             @if($results[$key] == $quiz->answer_number)
                 〇
                 @else
-                ✕
+                ✕ 
             @endif
             <br>
             <a>問題文：{{ $quiz->question }}</a>
@@ -26,7 +26,7 @@
             <br>
         @endforeach
         <a href='/categories'>トップ画面に戻る</a>
-        <a href=''></a>
+        <a href='/results'>表示</a>
     </body>
 </html>
 @endsection

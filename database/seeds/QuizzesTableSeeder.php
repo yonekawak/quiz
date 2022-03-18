@@ -19,7 +19,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文2',
@@ -28,7 +28,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文3',
@@ -37,7 +37,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文4',
@@ -46,7 +46,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文5',
@@ -55,7 +55,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文6',
@@ -64,7 +64,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文7',
@@ -73,7 +73,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文8',
@@ -82,7 +82,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文9',
@@ -91,7 +91,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
         DB::table('quizzes')->insert([
             'question' => '問題文10',
@@ -100,8 +100,7 @@ class QuizzesTableSeeder extends Seeder
             'choice2' => '選択肢2',
             'choice3' => '選択肢3',
             'choice4' => '選択肢4',
-            'category_id' => 0,
+            'category_id' => 1,
         ]);
     }
-    
 }

@@ -17,5 +17,4 @@ class CategoryController extends Controller
     {
         return view('categories/show')->with(['quizzes' => $quiz->get()]);
     }
-    
 }

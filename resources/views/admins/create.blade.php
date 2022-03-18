@@ -37,6 +37,14 @@
                 <a>答えの番号</a>
                 <input type="number" name="post[answer_number]" placeholder="答えの番号"/>
             </div>
+            <div class="category">
+                <h2>カテゴリー</h2>
+                <select name="post[category_id]">
+                    @foreach($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
             <input type="submit" value="保存"/>
         </form>
         <div class="back">[<a href="/admins">戻る</a>]</div>

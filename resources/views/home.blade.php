@@ -14,9 +14,9 @@
                         </div>
                     @endif
                     <div style="text-align:center;">
-                        {{ Auth::user()->name }}さん<br>
-                        ようこそ！<br>
-                        <a href="/categories"><button type="button" class='btn btn-secondary'>トップに移動する</button></a>
+                        {{ Auth::user()->name }}さんようこそ！
+                        <br>
+                        <a href="/categories" class='btn btn-secondary'>Go Page</a>
                     </div>
                 </div>
             </div>
