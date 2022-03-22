@@ -4,12 +4,17 @@ namespace App;
 
 use App\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class category extends Model
 {
-     protected $fillable = [
+    use SoftDeletes;
+    
+    protected $fillable = [
     'name',
-    'number'
+    'number',
+    'quiz_id',
+    'user_id'
     ];
     
     public function getByCategory(int $limit_count = 10)

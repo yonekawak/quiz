@@ -13,8 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/categories', 'CategoryController@index');
-
-Route::get('/categories/quizzes', 'CategoryController@show');
+Route::get('/categories/{category}/show', 'CategoryController@show');
 
 Route::get('/admins', 'QuizController@index')->middleware('admin');
 Route::get('/admins/create', 'QuizController@create');
@@ -25,8 +24,7 @@ Route::put('/admins/quizzes/{quiz}', 'QuizController@update');
 Route::delete('/admins/quizzes/{quiz}', 'QuizController@delete');
 
 Route::post('/results', 'ResultController@index');
-Route::get('/studies', 'ResultController@show');
-Route::post('/results/answer', 'ResultController@show');
+Route::get('/studies', 'StudyController@index');
 
 
 Auth::routes();

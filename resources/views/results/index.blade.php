@@ -13,20 +13,20 @@
     </head>
     <body>
         @foreach ($quizzes as $key => $quiz)
-            @if($results[$key] == $quiz->answer_number)
+            @if($results[$key]["choice_number"] == $quiz->answer_number)
                 〇
                 @else
                 ✕ 
             @endif
             <br>
-            {{ $quiz->question }}
+            <a>問題文：{{ $quiz->question }}</a>
             <br>
-            あなたの回答番号：{{ $results[$key] }}
+            あなたの回答番号：{{ $results[$key]["choice_number"] }}
             <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
             <br>
         @endforeach
         <a href='/categories'>トップ画面に戻る</a>
-        <a href=''></a>
+        <a href='/studies'>学習画面に行く</a>
     </body>
 </html>
 @endsection

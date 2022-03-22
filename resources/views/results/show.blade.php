@@ -12,21 +12,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        @foreach ($quizzes as $key => $quiz)
-            @if($results[$key] == $quiz->answer_number)
-                〇
-                @else
-                ✕ 
-            @endif
-            <br>
-            <a>問題文：{{ $quiz->question }}</a>
-            <br>
-            あなたの回答番号：{{ $results[$key] }}
-            <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
-            <br>
-        @endforeach
         <a href='/categories'>トップ画面に戻る</a>
-        <a href='/results'>表示</a>
     </body>
 </html>
 @endsection

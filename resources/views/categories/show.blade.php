@@ -19,8 +19,9 @@
             @foreach ($quizzes as $key => $quiz)
                 <div class='quizzes'>
                     <div class='quiz'>
+                        <input value="{{ $quiz->id }}" name="results[{{ $key }}][quiz_id]" type="hidden">
                         <h2 class='question'>{{ $quiz->question }}</h2>
-                        <select name="results[{{ $key }}]" size="4">
+                        <select name="results[{{ $key }}][choice_number]" size="4">
                             <option value="1">{{ $quiz->choice1 }}</option>
                             <option value="2">{{ $quiz->choice2 }}</option>
                             <option value="3">{{ $quiz->choice3 }}</option>
