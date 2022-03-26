@@ -24,7 +24,9 @@ Route::put('/admins/quizzes/{quiz}', 'QuizController@update');
 Route::delete('/admins/quizzes/{quiz}', 'QuizController@delete');
 
 Route::post('/results', 'ResultController@index');
-Route::get('/studies', 'StudyController@index');
+Route::get('/wrongs', 'ResultController@wrongIndex');
+Route::get('/wrongs/show', 'QuizController@wrongShow');
+Route::post('/results/wrong', 'ResultController@show');
 
 
 Auth::routes();

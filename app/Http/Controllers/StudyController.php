@@ -9,10 +9,10 @@ use App\Quiz;
 
 class StudyController extends Controller
 {
-    public function index(Result $result, Quiz $quiz)
+    public function show(Result $result, Quiz $quiz)
     {
         $study = new Study;
         
-        return view('studies/index')->with(['quizzes' => $study->getData()]);
+        return view('studies/show')->with(['quizzes' => $study->getData()]);
     }
 }

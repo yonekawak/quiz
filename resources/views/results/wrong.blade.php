@@ -14,10 +14,14 @@
     <body>
         <h1>学習画面</h1>
         @foreach ($quizzes as $quiz )
-            間違えた問題：<p>{{ $quiz[0]->question }}</p>
-            間違えた回数<p>{{ $quiz[1] }}</p>
-            
+            間違えた問題:{{ $quiz[0]->question }}
+            回数:{{ $quiz[1] }}
+            <br>
         @endforeach
+        <br>
+        間違えた問題だけのクイズ
+        <br>
+        <a href='/studies/show'>Go</a>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
     </body>

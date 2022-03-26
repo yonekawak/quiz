@@ -9,71 +9,59 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>quizzez</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>トップ画面</h1>
-        <div class='quizzes'>
+        <div class="quizzes row-8">
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-9">
-                        <h6>ステージ</h6>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/1/show">ステージ0</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/2/show">ステージ1</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/3/show">ステージ2</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/4/show">ステージ3</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/5/show">ステージ4</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/6/show">ステージ5</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/7/show">ステージ6</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/8/show">ステージ7</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/9/show">ステージ8</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/10/show">ステージ9</a>
-                            </p>
-                        </div>
+                    <div class="col-7 m-3 p-3">
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ0</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ1</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ2</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ3</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ4</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ5</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ6</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ7</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ8</a>
+                        </button>
+                        <br>
+                        <button type="button" class="btn btn-light btn-lg m-3 p-3">
+                            <a href="/categories/1/show" class="text-decoration-none">ステージ9</a>
+                        </button>
                     </div>
-                    <div class="col">
-                        <h6>ランキング</h6>
+                    <div class="col-3 m-3 p-3">
+                         <h6>ランキング</h6>
                         //ランキング機能
-                        <h6>目標</h6>
-                        //目標提示
+                        <br>
+                        <h6>twitter連携</h6>
+                        //twitter画面
                     </div>
                 </div>
             </div>
