@@ -26,7 +26,7 @@
             <br>
         @endforeach
         <a href='/categories'>トップ画面に戻る</a>
-        <a href='/studies'>学習画面に行く</a>
+        <a href='/wrongs'>学習画面に行く</a>
     </body>
 </html>
 @endsection

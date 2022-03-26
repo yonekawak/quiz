@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Quiz;
+use App\Result;
 use Illuminate\Http\Request;
 
 class QuizController extends Controller
@@ -11,6 +12,12 @@ class QuizController extends Controller
     public function index(Quiz $quiz, category $category)
     {
         return view('admins/index')->with(['quizzes' => $quiz->getPaginateByLimit(), 'categories' => $category->get()]);
+    }
+    //間違えた問題クイズ表示
+    public function wrongShow(Quiz $quiz)
+    {
+        $result = new Result;
+        return view('wrongs/show')->with(['quizzes' => $result->getWrong()]);
     }
     public function create(Category $category)
     {

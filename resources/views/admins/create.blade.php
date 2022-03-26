@@ -17,7 +17,7 @@
             @csrf
             <div class="question">
                 <a>問題文</a>
-                <input type="text" name="post[question]" placeholder="問題文"/>
+                <textarea type="text" name="post[question]" placeholder="問題文"></textarea>
             </div>
             <div class="body">
                 <br>
@@ -38,7 +38,7 @@
                 <input type="number" name="post[answer_number]" placeholder="答えの番号"/>
             </div>
             <div class="category">
-                <h2>カテゴリー</h2>
+                <h6>カテゴリー</h6>
                 <select name="post[category_id]">
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>

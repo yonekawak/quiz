@@ -18,6 +18,7 @@ class CreateResultsTable extends Migration
             $table->integer('user_id');
             $table->integer('quiz_id');
             $table->integer('choice_number');
+            $table->string('correct')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

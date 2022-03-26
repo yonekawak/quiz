@@ -22,7 +22,7 @@
 <body>
     <!-- navbar section -->
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="/">
                 サイト名
@@ -38,7 +38,7 @@
                             <a class="nav-link" href="/categories">レッスン（トップ画面）</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/studies">マイページ（学習画面）</a>
+                            <a class="nav-link" href="/wrongs">マイページ（学習画面）</a>
                         </li>
                         @auth
                             @if (in_array(auth()->user()->role, ['admin']))
