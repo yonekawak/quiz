@@ -9,76 +9,197 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>quizzez</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>トップ画面</h1>
-        <div class='quizzes'>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-9">
-                        <h6>ステージ</h6>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/1/show">ステージ0</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/2/show">ステージ1</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/3/show">ステージ2</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/4/show">ステージ3</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/5/show">ステージ4</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/6/show">ステージ5</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/7/show">ステージ6</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/8/show">ステージ7</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/9/show">ステージ8</a>
-                            </p>
-                        </div>
-                        <div class="card text-center" style="width: 18rem;">
-                            <p class="card-body">
-                                <a href="/categories/10/show">ステージ9</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h6>ランキング</h6>
-                        //ランキング機能
-                        <h6>目標</h6>
-                        //目標提示
-                    </div>
+     <div class="quizzes row-8">
+      <div class="container text-center">
+        <div class="row">
+         <div class="col-7 m-3 p-3">
+            <p class="card-text">
+             <div class="container">
+              <div class="row">
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/1/show">
+                   <img src="css/000.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「000」では0類に関わる問題が出題されます</p>
+                 </div>
                 </div>
-            </div>
+               </div>
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/2/show">
+                   <img src="css/100.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「100」では1類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </p>
+            <p class="card-text">
+             <div class="container">
+              <div class="row">
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/3/show">
+                   <img src="css/200.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「200」では2類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/4/show">
+                   <img src="css/300.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「300」では3類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </p>
+            <p class="card-text">
+             <div class="container">
+              <div class="row">
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/5/show">
+                   <img src="css/400.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「400」では4類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/6/show">
+                   <img src="css/500.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「500」では5類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </p>
+            <p class="card-text">
+             <div class="container">
+              <div class="row">
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/7/show">
+                   <img src="css/600.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「600」では6類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/8/show">
+                   <img src="css/700.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「700」では7類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </p>
+            <p class="card-text">
+             <div class="container">
+              <div class="row">
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/9/show">
+                   <img src="css/800.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「800」では8類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+               <div class="col">
+                <div class="card" style="width: 18rem;">
+                 <div class="card-body">
+                  <a href="/categories/10/show">
+                   <img src="css/900.PNG" class="rounded" width="90" height="150" alt="...">
+                  </a>
+                  <br>
+                  <svg width="20" height="20" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                  </svg>
+                  <p class="card-text">分類番号「900」では9類に関わる問題が出題されます</p>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </p>
+           </div>
+          <div class="col-3 m-3 p-3">
+            <h6>ランキング</h6>
+            //ランキング機能
+            <br>
+            <h6>twitter連携</h6>
+            //twitter画面
+          </div>
+         </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+       </div>
+      </div>
+     </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
 @endsection

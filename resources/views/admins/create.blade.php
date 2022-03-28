@@ -6,10 +6,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>quizzez</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <h1>作成画面</h1>
@@ -17,7 +18,7 @@
             @csrf
             <div class="question">
                 <a>問題文</a>
-                <input type="text" name="post[question]" placeholder="問題文"/>
+                <textarea type="text" name="post[question]" placeholder="問題文"></textarea>
             </div>
             <div class="body">
                 <br>
@@ -38,7 +39,7 @@
                 <input type="number" name="post[answer_number]" placeholder="答えの番号"/>
             </div>
             <div class="category">
-                <h2>カテゴリー</h2>
+                <h6>カテゴリー</h6>
                 <select name="post[category_id]">
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>

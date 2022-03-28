@@ -32,6 +32,7 @@ class Study extends Model
         }
         return $error;
     }
+    
 }
 
 
