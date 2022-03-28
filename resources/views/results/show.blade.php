@@ -6,10 +6,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <title>quizzez</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <p class="card-text">
@@ -40,10 +41,7 @@
                                                 <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
                                                 <br>
                                                 @if($results[$key]["choice_number"] == $quiz->answer_number)
-                                                <button type="button" class="btn btn-light btn-lg m-3 p-3">
-                                                    習得済み
-                                                    //correct=tureにする処理を書く
-                                                </button>
+                                                    <p class='changeCorrec'>[<span onclick="return changeCorrec(this);">習得済み</span>]</p> 
                                                 @endif
                                             </div>
                                         </div>
@@ -57,6 +55,16 @@
             </div>
         </p>
         <a href='/wrongs'>マイページに戻る</a>
+        <script>
+            function changeCorrec(e) {
+                'use strict';
+                if(confirm('マイページから問題が消去されます。\n本当に消去しますか？')){
+                    document.getElementById('form_delete').submit();
+                }
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
     </body>
 </html>
 @endsection
