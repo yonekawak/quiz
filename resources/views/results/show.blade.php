@@ -41,7 +41,9 @@
                                                 <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
                                                 <br>
                                                 @if($results[$key]["choice_number"] == $quiz->answer_number)
-                                                    <p class='changeCorrec'>[<span onclick="return changeCorrec(this);">習得済み</span>]</p> 
+                                                    <button type="button" class="btn btn-warning btn-lg m-3 p-3">
+                                                        [<span onclick="return updateCorrec(this);">修得済み</span>]
+                                                    </button>
                                                 @endif
                                             </div>
                                         </div>
@@ -56,10 +58,9 @@
         </p>
         <a href='/wrongs'>マイページに戻る</a>
         <script>
-            function changeCorrec(e) {
+            function updateCorrec(e) {
                 'use strict';
                 if(confirm('マイページから問題が消去されます。\n本当に消去しますか？')){
-                    document.getElementById('form_delete').submit();
                 }
             }
         </script>

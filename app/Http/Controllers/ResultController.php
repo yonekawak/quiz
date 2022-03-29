@@ -28,10 +28,8 @@ class ResultController extends Controller
             }
             $result->fill($input)->save();
         }
-        //dd($inputs);
         return view('results/index')->with(['quizzes' => $quiz->get(),'results' => $inputs]);
     }
-    
     public function wrongIndex(Quiz $quiz)
     {
         $result = new Result;

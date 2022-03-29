@@ -11,18 +11,19 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body bgcolor="brack">
      <div class="quizzes row-8">
       <div class="container text-center">
         <div class="row">
-         <div class="col-7 m-3 p-3">
             <p class="card-text">
              <div class="container">
               <div class="row">
                <div class="col">
                 <div class="card" style="width: 18rem;">
+                 @foreach ($quizzes as $quiz)
+                 @endforeach
                  <div class="card-body">
-                  <a href="/categories/1/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/000.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -186,14 +187,6 @@
               </div>
              </div>
             </p>
-           </div>
-          <div class="col-3 m-3 p-3">
-            <h6>ランキング</h6>
-            //ランキング機能
-            <br>
-            <h6>twitter連携</h6>
-            //twitter画面
-          </div>
          </div>
         </div>
        </div>
