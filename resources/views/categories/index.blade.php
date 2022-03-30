@@ -37,7 +37,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/2/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/100.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -57,7 +57,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/3/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/200.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -71,7 +71,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/4/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/300.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -91,7 +91,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/5/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/400.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -105,7 +105,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/6/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/500.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -125,7 +125,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/7/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/600.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -139,7 +139,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/8/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/700.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -159,7 +159,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/9/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/800.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>
@@ -173,7 +173,7 @@
                <div class="col">
                 <div class="card" style="width: 18rem;">
                  <div class="card-body">
-                  <a href="/categories/10/show">
+                  <a href="/categories/{{ $quiz->category->id}}/show">
                    <img src="css/900.PNG" class="rounded" width="90" height="150" alt="...">
                   </a>
                   <br>

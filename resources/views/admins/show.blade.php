@@ -42,7 +42,7 @@
         <p class="edit">[<a href="/admins/quizzes/{{ $quiz->id }}/edit">編集する</a>]</p>
         <div class="footer">
             <a href="/admins">戻る</a>
-            <a href="">{{ $quiz->category->name }}</a>
+            <a href="/categories">{{ $quiz->category->name }}</a>
         </div>
         <script>
             function deletePost(e) {
