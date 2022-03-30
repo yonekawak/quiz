@@ -13,11 +13,14 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
+        @if( !$quizzes  )
+        <h6>現在間違えた問題はありません</h6>
+        @endif
         <p class="card-text">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                    @foreach ($quizzes as $quiz )
+                    @foreach ($quizzes as $quiz)
                         <div class="card" style="width: 50rem;">
                             <div class="card-body ry-4">
                                 <h5 class="card-title">{{ $quiz->quiz_id }}, 間違えた問題:{{ $quiz->quiz->question }}</h5>

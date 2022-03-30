@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Auth;
 
-class Result extends Model
+class Wrong extends Model
 {
     use SoftDeletes;
 
@@ -30,5 +30,20 @@ class Result extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+    /**
+    *  間違った問題だけを取得する
+    *   
+    * @param $results(ログインしているユーザーの回答データ)
+    * @return $wrongs(間違えたデータ)
+    */
+    public function getWrong()
+    {
+        $user = Auth::user();
+        //userの回答データを持ってくる
+        $results = $user->results;
+        //correctカラムがfalseのデータだけgetする
+        $wrongs = Result::where("correct",0)->groupBy('quiz_id')->get();
+        return $wrongs;
     }
 }

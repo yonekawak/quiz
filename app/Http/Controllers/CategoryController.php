@@ -9,9 +9,9 @@ use App\Quiz;
 
 class CategoryController extends Controller
 {
-    public function index(Category $category, Quiz $quiz)
+    public function index(Quiz $quiz, category $category)
     {
-        return view('categories/index')->with(['quizzes' => $quiz->get(), 'category' => $category->get()]);
+        return view('categories/index')->with(['quizzes' => $quiz->get(), 'categories' => $category->get()]);;
     }
     public function show(Quiz $quiz)
     {

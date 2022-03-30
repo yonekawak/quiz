@@ -20,7 +20,7 @@
                     <div class="col">
                         <div class="card" style="width: 50rem;">
                             <div class="card-body ry-4">
-                                @if($results[$key]["choice_number"] == $quiz->answer_number)
+                                @if($wrongs[$key]["choice_number"] == $quiz->answer_number)
                                     〇 正解
                                     @else
                                     ✕ 不正解
@@ -37,11 +37,16 @@
                                                 <h6>選択肢4：{{ $quiz->choice4 }}</h6>
                                             </div>
                                             <div class="col">
-                                                <h6>あなたの回答番号：{{ $results[$key]["choice_number"] }}</h6>
+                                                <h6>あなたの回答番号：{{ $wrongs[$key]["choice_number"] }}</h6>
                                                 <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
                                                 <br>
-                                                @if($results[$key]["choice_number"] == $quiz->answer_number)
-                                                    <p class='changeCorrec'>[<span onclick="return changeCorrec(this);">習得済み</span>]</p> 
+                                                @if($wrongs[$key]["choice_number"] == $quiz->answer_number)
+                                                <form action="/wrongs/{{ $quiz->id }}" id="form_delete" method="post">
+                                                    {{ csrf_field()}}
+                                                    {{ method_field('delete') }}
+                                                    <input type="submit" style="display:none">
+                                                    <p class='delete'>[<span onclick="return deleteWrong(this);">delete</span>]</p>
+                                                </form>
                                                 @endif
                                             </div>
                                         </div>
@@ -56,9 +61,9 @@
         </p>
         <a href='/wrongs'>マイページに戻る</a>
         <script>
-            function changeCorrec(e) {
+            function deleteWrong(e) {
                 'use strict';
-                if(confirm('マイページから問題が消去されます。\n本当に消去しますか？')){
+                if(confirm('マイページからこの問題を消去しますか？')){
                     document.getElementById('form_delete').submit();
                 }
             }

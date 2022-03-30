@@ -16,11 +16,22 @@ class category extends Model
     'quiz_id',
     'user_id'
     ];
-    
+    /**
+    *  カテゴリーごとに属するクイズを取得する処理
+    * @param $
+    * @return $
+    */
     public function getByCategory(int $limit_count = 10)
     {
         return $this->quizzes()->with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
+        
+        //あるCategoryインスタンスのクイズのうち、nameが'souki'のものを取得する
+        $category->quizzes()->where('name', 'souki')->get();
+
     }
+    /**
+    *  リレーション １対多
+    */
     public function quizzes()   
     {
         return $this->hasMany('App\Quiz');  
