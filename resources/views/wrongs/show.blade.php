@@ -15,19 +15,20 @@
     </head>
     <body>
         <div class="container text-center">
-        <form  action="/results/wrong" method="POST">
+        <form  action="/results" method="POST">
             <div class="text-left">
             @csrf
-            @foreach ($quizzes as $key =>$quiz)
+            {{ method_field('put') }}
+            @foreach ($results as $key =>$result)
             <div class='quizzes'>
                     <div class='quiz'>
-                        <input value="{{ $quiz->quiz->id }}" name="wrongs[{{ $key }}][quiz_id]" type="hidden">
-                            <h5 class='question'>{{ $quiz->quiz->question }}</h5>
+                        <input value="{{ $result->quiz->id }}" name="wrongs[{{ $key }}][quiz_id]" type="hidden">
+                            <h5 class='question'>{{ $result->quiz->question }}</h5>
                         <select name="wrongs[{{ $key }}][choice_number]" size="4" style="width: 14rem;" class="border border-primary">
-                            <option value="1">{{ $quiz->quiz->choice1 }}</option>
-                            <option value="2">{{ $quiz->quiz->choice2 }}</option>
-                            <option value="3">{{ $quiz->quiz->choice3 }}</option>
-                            <option value="4">{{ $quiz->quiz->choice4 }}</option>
+                            <option value="1">{{ $result->quiz->choice1 }}</option>
+                            <option value="2">{{ $result->quiz->choice2 }}</option>
+                            <option value="3">{{ $result->quiz->choice3 }}</option>
+                            <option value="4">{{ $result->quiz->choice4 }}</option>
                         </select>
                     </div>
                 </div>
@@ -35,8 +36,8 @@
             @endforeach
             </div>
             <div>
-                <a href='/categories'>トップ画面に戻る</a>
-                <input type="submit" value="回答する"/>
+                <button type="button" class="btn btn-warning btn-lg m-3 p-3" onclick="location.href='/categories'">トップ画面に戻る</button>
+                <input type="submit" class="btn btn-danger btn-lg m-3 p-3" value="回答する"/>
             </div>
         </form>
         </div>

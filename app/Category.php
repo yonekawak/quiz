@@ -23,11 +23,7 @@ class category extends Model
     */
     public function getByCategory(int $limit_count = 10)
     {
-        return $this->quizzes()->with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
-        
-        //あるCategoryインスタンスのクイズのうち、nameが'souki'のものを取得する
-        $category->quizzes()->where('name', 'souki')->get();
-
+        return $this::with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
     /**
     *  リレーション １対多

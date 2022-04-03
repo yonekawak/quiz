@@ -50,4 +50,15 @@ class QuizController extends Controller
         $quiz->delete();
         return redirect('/admins');
     }
+    /**
+    *  間違えた問題だけのクイズ表示
+    *   
+    * @param $results(ログインしているユーザーの回答データ)
+    * @return $wrongs(間違えたデータ)
+    */
+    public function wrongShow(Quiz $quiz)
+    {
+        $result = new Result;
+        return view('wrongs/show')->with(['results' => $result->getWrong()]);
+    }
 }

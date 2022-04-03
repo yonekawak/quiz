@@ -30,12 +30,12 @@ Route::delete('/admins/quizzes/{quiz}', 'QuizController@delete');
 
 
 //マイページ画面
-Route::get('/wrongs', 'WrongController@index');
+Route::get('/wrongs', 'ResultController@wrongIndex');
 //クイズ選択
-Route::get('/wrongs/show', 'WrongController@wrongShow');
+Route::get('/wrongs/show', 'QuizController@wrongShow');
 //回答データ
-Route::post('/results/wrong', 'WrongController@show');
-Route::delete('/wrongs/{quiz}', 'WrongController@delete');
+Route::put('/results', 'ResultController@update');
+Route::delete('/wrongs/{quiz}', 'ResultController@delete');
 
 //ログイン画面
 Auth::routes();

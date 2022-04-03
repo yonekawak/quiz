@@ -13,9 +13,8 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        @if( !$quizzes  )
-        <h6>現在間違えた問題はありません</h6>
-        @endif
+        <h6>この場所には&#10060;だった問題だけが表示されます。
+        <br>Goボタンから1度間違えた問題だけのクイズを開始でき、正解した問題はマイページから自動的に消去されます。</h6>
         <p class="card-text">
             <div class="container">
                 <div class="row">
@@ -23,21 +22,19 @@
                     @foreach ($quizzes as $quiz)
                         <div class="card" style="width: 50rem;">
                             <div class="card-body ry-4">
-                                <h5 class="card-title">{{ $quiz->quiz_id }}, 間違えた問題:{{ $quiz->quiz->question }}</h5>
+                                <h6 class="card-title">{{ $quiz->quiz_id }}, 間違えた問題:{{ $quiz->quiz->question }}</h6>
                                 <p class="card-text">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
-                                                <h5>選択肢1:{{ $quiz->quiz->choice1 }}</h5>
-                                                <h5>選択肢2:{{ $quiz->quiz->choice2 }}</h5>
-                                                <h5>選択肢3:{{ $quiz->quiz->choice3 }}</h5>
-                                                <h5>選択肢4:{{ $quiz->quiz->choice4 }}</h5>
+                                                <h6>選択肢1:{{ $quiz->quiz->choice1 }}</h6>
+                                                <h6>選択肢2:{{ $quiz->quiz->choice2 }}</h6>
+                                                <h6>選択肢3:{{ $quiz->quiz->choice3 }}</h6>
+                                                <h6>選択肢4:{{ $quiz->quiz->choice4 }}</h6>
                                             </div>
                                             <div class="col">
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <h5><u>答え:選択肢{{ $quiz->quiz->answer_number }}</u></h5>
+                                                答えを確認する：<input type="checkbox">
+                                                <p><u>選択肢{{ $quiz->quiz->answer_number }}</u></p>
                                             </div>
                                         </div>
                                     </div>
@@ -47,10 +44,9 @@
                     @endforeach
                     </div>
                     <div class="col">
-                        <h4>間違えた問題だけのクイズ</h4>
-                        <button type="button" class="btn btn-warning btn-lg m-3 p-3">
-                            <a href='/wrongs/show' class="text-decoration-none">Go</a> 
-                        </button>
+                        <h4>クイズを開始する
+                            <button type="button" class="btn btn-warning btn-lg m-3 p-3" onclick="location.href='/wrongs/show'">Go</button>
+                        </h4>
                     </div>
                 </div>
             </div>

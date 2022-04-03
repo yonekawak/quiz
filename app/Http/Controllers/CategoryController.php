@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function index(Quiz $quiz, category $category)
     {
-        return view('categories/index')->with(['quizzes' => $quiz->get(), 'categories' => $category->get()]);;
+        return view('categories/index')->with(['quizzes' => $quiz->get()]);
     }
     public function show(Quiz $quiz)
     {

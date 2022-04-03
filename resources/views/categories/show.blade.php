@@ -35,8 +35,8 @@
                 @endforeach
                 </div>
                 <div>
-                    <a href='/categories' >トップ画面に戻る</a>
-                    <input type="submit" value="回答する"/>
+                    <button type="button" class="btn btn-warning btn-lg m-3 p-3" onclick="location.href='/categories'">トップ画面に戻る</button>
+                    <input type="submit" class="btn btn-danger btn-lg m-3 p-3" value="回答する"/>
                 </div>
             </form>
         </div>
