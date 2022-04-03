@@ -16,38 +16,28 @@
         <p class="card-text">
             <div class="container">
                 <div class="row">
-                    @foreach ($quizzes as $key => $quiz)
+                    @foreach ($results as $key => $result)
                     <div class="col">
                         <div class="card" style="width: 50rem;">
                             <div class="card-body ry-4">
-                                @if($wrongs[$key]["choice_number"] == $quiz->answer_number)
-                                    〇 正解
+                                @if($inputs[$key]["choice_number"] == $result->quiz->answer_number)
+                                    <u class="text-primary">&#9711;　正解</u><br>
                                     @else
-                                    ✕ 不正解
+                                    <u class="text-danger">&#10060; 不正解</u><br>
                                 @endif
-                                <br>
-                                <a>問題文：{{ $quiz->question }}</a>
+                                <a>{{ $result->quiz->id }}, 問題文：{{ $result->quiz->question }}</a>
                                 <p class="card-text">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col">
-                                                <h6>選択肢1：{{ $quiz->choice1 }}</h6>
-                                                <h6>選択肢2：{{ $quiz->choice2 }}</h6>
-                                                <h6>選択肢3：{{ $quiz->choice3 }}</h6>
-                                                <h6>選択肢4：{{ $quiz->choice4 }}</h6>
+                                                <h6>選択肢1：{{ $result->quiz->choice1 }}</h6>
+                                                <h6>選択肢2：{{ $result->quiz->choice2 }}</h6>
+                                                <h6>選択肢3：{{ $result->quiz->choice3 }}</h6>
+                                                <h6>選択肢4：{{ $result->quiz->choice4 }}</h6>
                                             </div>
                                             <div class="col">
-                                                <h6>あなたの回答番号：{{ $wrongs[$key]["choice_number"] }}</h6>
-                                                <h6 class='answer_number'>正解番号：{{ $quiz->answer_number }}</h6>
-                                                <br>
-                                                @if($wrongs[$key]["choice_number"] == $quiz->answer_number)
-                                                <form action="/wrongs/{{ $quiz->id }}" id="form_delete" method="post">
-                                                    {{ csrf_field()}}
-                                                    {{ method_field('delete') }}
-                                                    <input type="submit" style="display:none">
-                                                    <p class='delete'>[<span onclick="return deleteWrong(this);">delete</span>]</p>
-                                                </form>
-                                                @endif
+                                                <h6>あなたの回答番号：{{ $inputs[$key]["choice_number"] }}</h6>
+                                                <h6 class='answer_number'>正解番号：{{ $result->quiz->answer_number }}</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -59,15 +49,7 @@
                 </div>
             </div>
         </p>
-        <a href='/wrongs'>マイページに戻る</a>
-        <script>
-            function deleteWrong(e) {
-                'use strict';
-                if(confirm('マイページからこの問題を消去しますか？')){
-                    document.getElementById('form_delete').submit();
-                }
-            }
-        </script>
+        <button type="button" class="btn btn-warning btn-lg m-3 p-3"  onclick="location.href='/wrongs'">マイページに戻る</button><a href='/wrongs'>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
     </body>

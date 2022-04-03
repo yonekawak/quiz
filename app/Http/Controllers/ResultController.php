@@ -31,8 +31,43 @@ class ResultController extends Controller
             }else{
                 $input += ['correct' => false];
             }
-            $result->fill($input)->save();
+            $result->updateOrCreate($input);
         }
         return view('results/index')->with(['quizzes' => $quiz->get(),'results' => $inputs]);
+    }
+    /**
+    *  resultsテーブルのfalseのみを表示
+    *   
+    * @param $inputs(ログインしているユーザーの回答データ)
+    * @return $wrong
+    */
+    public function wrongIndex(Quiz $quiz)
+    {
+        $result = new Result;
+        return view('wrongs/index')->with(['quizzes' => $result->getWrong()]);
+    }
+    /**
+    *  正解した問題を
+    *   
+    * @param $inputs(ログインしているユーザーの回答データ)
+    * @return $wrong
+    */
+    public function update(Request $request,Result $result)
+    {
+        $inputs = $request['wrongs'];
+        $results = $result->getWrong();
+        foreach($inputs as $input){
+            
+            $result = $result->where("user_id",Auth::id())->where("quiz_id",$input['quiz_id'])->first();
+            $quiz = new Quiz;
+            $answer_number = $quiz->where("id",$input['quiz_id'])->first()->answer_number;
+            if($input['choice_number'] == $answer_number){
+                $input += ['correct' => true];
+            }else{
+                $input += ['correct' => false];
+            }
+            $result->fill($input)->save();
+        }
+        return view('results/show')->with(['results' => $results,'inputs' => $inputs]);
     }
 }

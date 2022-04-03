@@ -31,4 +31,19 @@ class Result extends Model
     {
         return $this->belongsTo('App\User');
     }
+    /**
+    *  間違った問題だけをresultsテーブルから取得
+    *   
+    * @param $results(ログインしているユーザーの回答データ)
+    * @return $wrongs(間違えたデータ)
+    */
+    public function getWrong()
+    {
+        $user = Auth::user();
+        //userの回答データを持ってくる
+        $results = $user->results;
+        //correctカラムがfalseのデータだけgetする
+        $wrongs = Result::where("correct",0)->groupBy('quiz_id')->get();
+        return $wrongs;
+    }
 }
