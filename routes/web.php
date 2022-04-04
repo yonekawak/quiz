@@ -35,7 +35,6 @@ Route::get('/wrongs', 'ResultController@wrongIndex');
 Route::get('/wrongs/show', 'QuizController@wrongShow');
 //回答データ
 Route::put('/results', 'ResultController@update');
-Route::delete('/wrongs/{quiz}', 'ResultController@delete');
 
 //ログイン画面
 Auth::routes();

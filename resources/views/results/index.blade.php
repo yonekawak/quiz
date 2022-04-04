@@ -46,7 +46,8 @@
                 </div>
             </div>
         </p>
-        <button type="button" class="btn btn-warning btn-lg m-3 p-3"  onclick="location.href='/categories'">トップ画面に戻る</button>
+        <button type="button" class="btn btn-warning btn-lg m-3 p-3" onclick="location.href='/categories'">トップ画面に戻る</button>
+        <button type="button" class="btn btn-warning btn-lg m-3 p-3" onclick="location.href='/wrongs'">マイページで学習する</button>
     </body>
 </html>
 @endsection

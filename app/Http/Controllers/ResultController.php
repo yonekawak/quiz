@@ -14,7 +14,7 @@ class ResultController extends Controller
     *  クイズの回答をresultsテーブルに保存
     *   
     * @param $inputs(ログインしているユーザーの回答データ)
-    * @return $result
+    * @return view
     */
     public function index(Request $request)
     {
@@ -39,7 +39,7 @@ class ResultController extends Controller
     *  resultsテーブルのfalseのみを表示
     *   
     * @param $inputs(ログインしているユーザーの回答データ)
-    * @return $wrong
+    * @return view
     */
     public function wrongIndex(Quiz $quiz)
     {
@@ -47,10 +47,10 @@ class ResultController extends Controller
         return view('wrongs/index')->with(['quizzes' => $result->getWrong()]);
     }
     /**
-    *  正解した問題を
+    *  クイズの回答をresultsテーブルに更新
     *   
     * @param $inputs(ログインしているユーザーの回答データ)
-    * @return $wrong
+    * @return view
     */
     public function update(Request $request,Result $result)
     {
